@@ -44,6 +44,12 @@
   .SurveyInfo {
     padding: 7px 5px 0px;
   }
+
+  .SurveyInfoHeader {
+    &:hover {
+      background-color: #566371 !important;
+    }
+  }
 }
 
 .SurveyContainer {
@@ -53,4 +59,16 @@
 
 .card-header {
   margin-bottom: 5px;
+}
+
+.SurveyAttribute {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .SurveyAttribute--expandable {
+    &:hover {
+      background-color: #ccc;
+    }
+  }
 }

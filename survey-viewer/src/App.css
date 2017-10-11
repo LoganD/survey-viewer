@@ -32,6 +32,8 @@
     width: calc(33.3% - 20px); }
   .Survey .SurveyInfo {
     padding: 7px 5px 0px; }
+  .Survey .SurveyInfoHeader:hover {
+    background-color: #566371 !important; }
 
 .SurveyContainer {
   display: flex;
@@ -39,3 +41,10 @@
 
 .card-header {
   margin-bottom: 5px; }
+
+.SurveyAttribute {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .SurveyAttribute .SurveyAttribute--expandable:hover {
+    background-color: #ccc; }
