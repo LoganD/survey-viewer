@@ -5,6 +5,10 @@ import "bootstrap/dist/css/bootstrap-theme.css";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
+import cachedSurveys from "./data/surveys.json";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+  <App localData={cachedSurveys} useLocalData={true} />,
+  document.getElementById("root")
+);
 registerServiceWorker();
