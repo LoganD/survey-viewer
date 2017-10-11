@@ -105,7 +105,12 @@ class SurveyQuotas extends React.Component {
 
   buildQuotas() {
     return this.props.quotas.map((quota, index) => {
-      return <SurveyQuota {...quota} key={`{quota.name} {index}`} />;
+      return (
+        <SurveyQuota
+          {...quota}
+          key={`{question.name} {question.quota_question_precodes.join()}`}
+        />
+      );
     });
   }
 
@@ -130,11 +135,18 @@ class SurveyQuotas extends React.Component {
 }
 
 class SurveyQuota extends React.Component {
+  state = {
+    isOpen: false
+  };
   getClassNameForQuota() {
     return this.props.quota_questions.length > 0
       ? "SurveyAttribute--expandable SurveyAttribute list-group-item"
       : "SurveyAttribute list-group-item";
   }
+  toggleOpen = () => {
+    const toggled = !this.state.isOpen;
+    this.setState({ isOpen: toggled });
+  };
   buildQuestions(questions) {
     return questions.map(question => {
       return (
@@ -149,7 +161,7 @@ class SurveyQuota extends React.Component {
   render() {
     const questions = this.props.quota_questions;
     return (
-      <li className={this.getClassNameForQuota()}>
+      <li className={this.getClassNameForQuota()} onClick={this.toggleOpen}>
         <p className="card-text mb-0">
           Type:
           <text className="text-muted">{this.props.survey_quota_type}</text>
@@ -163,9 +175,11 @@ class SurveyQuota extends React.Component {
           <text className="text-muted">{this.props.number_of_respondents}</text>
         </p>
         <p className="card-text mb-0">Quota Questions: ({questions.length})</p>
-        <span>
-          {questions.length > 0 ? this.buildQuestions(questions) : null}
-        </span>
+        <ul>
+          {questions.length > 0 && this.state.isOpen
+            ? this.buildQuestions(questions)
+            : null}
+        </ul>
       </li>
     );
   }

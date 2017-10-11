@@ -46,5 +46,5 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
-  .SurveyAttribute .SurveyAttribute--expandable:hover {
+  .SurveyAttribute.SurveyAttribute--expandable:hover {
     background-color: #ccc; }
