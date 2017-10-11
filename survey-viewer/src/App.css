@@ -24,9 +24,18 @@
     transform: rotate(360deg); } }
 
 .Survey {
-  border: 1px solid #aaa;
-  border-radius: 3px; }
+  border-radius: 3px;
+  margin: 0 5px 10px;
+  width: calc(33.3% - 10px); }
+  .Survey:nth-child(3n + 2) {
+    margin: 0 10px 10px;
+    width: calc(33.3% - 20px); }
+  .Survey .SurveyInfo {
+    padding: 7px 5px 0px; }
 
 .SurveyContainer {
   display: flex;
   flex-wrap: wrap; }
+
+.card-header {
+  margin-bottom: 5px; }
