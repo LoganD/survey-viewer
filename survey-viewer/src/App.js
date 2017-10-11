@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Grid, Navbar, Jumbotron, Button } from "react-bootstrap";
+import { Survey, SurveyContainer } from "./components.js";
 
-class App extends Component {
+class App extends React.Component {
   state = {
     surveys: []
   };
@@ -34,7 +35,7 @@ class App extends Component {
           <Grid>
             <Navbar.Header>
               <Navbar.Brand>
-                <a href="/">React App</a>
+                <a href="/">Survey Viewer</a>
               </Navbar.Brand>
               <Navbar.Toggle />
             </Navbar.Header>
@@ -42,19 +43,13 @@ class App extends Component {
         </Navbar>
         <Jumbotron>
           <Grid>
-            <h1>Welcome to React</h1>
+            <h1>Welcome to the Survey Viewer</h1>
             <p>
-              <Button
-                bsStyle="success"
-                bsSize="large"
-                href="http://react-bootstrap.github.io/components.html"
-                target="_blank"
-              >
-                View React Bootstrap Docs
-              </Button>
+              Below You'll find a list of surveys and information about them.
             </p>
           </Grid>
         </Jumbotron>
+        <SurveyContainer surveys={this.state.surveys} />
       </div>
     );
   }
