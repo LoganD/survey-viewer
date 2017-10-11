@@ -37,7 +37,7 @@ class App extends React.Component {
               Below You'll find a list of surveys and information about them.
               <br />
               Currently we have
-              <strong>{this.state.surveys.length} surveys </strong>in the
+              <strong> {this.state.surveys.length} surveys </strong>in the
               system.
             </p>
           </div>

@@ -7,7 +7,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import cachedSurveys from "./data/surveys.json";
 
 ReactDOM.render(
-  <App localData={cachedSurveys} useLocalData={true} />,
+  <App localData={cachedSurveys} useLocalData={false} />,
   document.getElementById("root")
 );
 registerServiceWorker();

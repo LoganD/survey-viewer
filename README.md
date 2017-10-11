@@ -8,4 +8,7 @@ npm start
 ```
 * Yes, the inner survery-viewer folder
 
+### To use cached data
+change the `useLocalData={false}` in index.js to `true`
+
 Then open [http://localhost:3000/](http://localhost:3000/) to see your app.<br>
