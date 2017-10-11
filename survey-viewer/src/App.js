@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Grid, Navbar, Jumbotron, Button } from "react-bootstrap";
 import { Survey, SurveyContainer } from "./components.js";
 
 class App extends React.Component {
@@ -31,24 +30,18 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar inverse fixedTop>
-          <Grid>
-            <Navbar.Header>
-              <Navbar.Brand>
-                <a href="/">Survey Viewer</a>
-              </Navbar.Brand>
-              <Navbar.Toggle />
-            </Navbar.Header>
-          </Grid>
-        </Navbar>
-        <Jumbotron>
-          <Grid>
+        <div className="jumbotron">
+          <div className="container">
             <h1>Welcome to the Survey Viewer</h1>
             <p>
               Below You'll find a list of surveys and information about them.
+              <br />
+              Currently we have
+              <strong>{this.state.surveys.length} surveys </strong>in the
+              system.
             </p>
-          </Grid>
-        </Jumbotron>
+          </div>
+        </div>
         <SurveyContainer surveys={this.state.surveys} />
       </div>
     );
