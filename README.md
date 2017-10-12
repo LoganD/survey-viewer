@@ -25,3 +25,5 @@ Thoughts about further development:
 3. Code clean up - Not everything in this project is included in the most optimal way. A subset of bootstrap could be included vs having the whole thing. The code library I started with comes with a lot of extra features that could be removed. Given the time constraint of the project, I focused on the functionality and getting all of the necessary pieces in place, rather than making them production ready with the smallest bundle size.
 
 #### This is not an exhaustive discussion of the project, just an overview to pass on some thoughts while it's reviewed.
+
+![Application Screenshot](app.png)
