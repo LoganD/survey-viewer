@@ -11,12 +11,6 @@
   padding: 20px;
   color: white; }
 
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg); }
@@ -25,22 +19,23 @@
 
 .Survey {
   border-radius: 3px;
+  font-size: 0.75em;
   margin: 0 5px 10px;
   width: calc(33.3% - 10px); }
   .Survey:nth-child(3n + 2) {
     margin: 0 10px 10px;
     width: calc(33.3% - 20px); }
   .Survey .SurveyInfo {
+    flex-grow: 1;
     padding: 7px 5px 0px; }
   .Survey .SurveyInfoHeader:hover {
     background-color: #566371 !important; }
+  .Survey .card-header {
+    font-size: 1em; }
 
 .SurveyContainer {
   display: flex;
   flex-wrap: wrap; }
-
-.card-header {
-  margin-bottom: 5px; }
 
 .SurveyAttribute {
   display: flex;

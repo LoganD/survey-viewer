@@ -20,13 +20,13 @@ class Survey extends React.Component {
         <div className="card-header bg-info text-white">
           {this.props.survey_name}
         </div>
-        <div className="card-block SurveyInfo">
-          <h6 className="card-subtitle mb-2">
+        <div className="card-block SurveyInfo mb-2">
+          <p className="card-text mb-0">
             ID: <text className="text-muted">{this.props.id}</text>
-          </h6>
-          <h6 className="card-subtitle mb-2">
+          </p>
+          <p className="card-text mb-0">
             Ends on: <text className="text-muted">{endDate.toString()}</text>
-          </h6>
+          </p>
         </div>
         <SurveyQualifications qualifications={qualifications} />
         <SurveyQuotas quotas={quotas} />
