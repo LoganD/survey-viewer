@@ -171,7 +171,7 @@ class SurveyQuota extends React.Component {
           <text className="text-muted">{this.props.quota_cpi}</text>
         </p>
         <p className="card-text mb-0">
-          Number of Respondents:
+          Respondents:
           <text className="text-muted">{this.props.number_of_respondents}</text>
         </p>
         <p className="card-text mb-0">Quota Questions: ({questions.length})</p>
